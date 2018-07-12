@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title></title>
+<link href="https://fonts.googleapis.com/css?family=Meddon" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+
+<style type="text/css">
+body{
+	background-image:url("bg.jpg");
+	background-size:cover;
+	background-position:center;
+	margin:0%;
+	overflow-x: hidden;
+
+}
+
+
+
+.footer{
+
+	color: #818181;
+	text-align:center;
+	height:5%;
+	font-size:70%;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	opacity:0.8;
+	font-family: 'Cormorant SC', serif;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 70px;
+    transition: 0.5s; 
+	
+
+}
+ 
+
+.sidenav a {
+    padding: 60px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+	font-family: 'Cormorant SC', serif;
+	
+}
+ 
+
+.sidenav a:hover{
+	opacity:0.8;
+	font-size:18px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+	margin-top:-40px;
+}
+ 
+.sidenav .closebtn:hover {
+	color: #80002a;
+	font-size:36px;
+
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    overflow:hidden;
+    width:100%;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+	width:65px;
+	height:750px;
+	opacity:0.5;
+}
+ 
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+	margin-top:330px;
+}
+ 
+.wp-caption {
+padding: 0;
+margin: 0;
+position:absolute;
+top:23%;
+left:30%;
+text-align:center;
+animation: mymove 2s;
+}
+
+.wp-caption img{
+width:260px;
+filter: grayscale(50%);
+filter: brightness(80%);
+
+}
+
+@keyframes mymove {
+    from {left: -500px;}
+    to {left: 30%;}
+}
+
+.wp-caption-text {
+
+	position: absolute;
+	width: 380px;
+	height:150px;
+	color: #fff;
+	top:-30%;
+	left: 140%;
+	text-align:center;
+	padding:20px;
+	font-weight: 700;
+	z-index: 2;
+	box-sizing: border-box;
+	transition: opacity .3s ease-in-out;
+	font-family: 'Cormorant SC', serif;
+	font-weight:lighter;
+	font-size:34px;
+	text-transform:lowercase;
+}
+
+form{
+
+width:800px;
+height:600px;
+position:absolute;
+top:0%;
+left:53%;
+opacity:0.7;
+}
+
+input[type="text"]{
+border:1px solid white;
+background-color:hsla(328, 100%, 100%, 0.22);
+margin-bottom:50px;
+width:200px;
+color:white;
+}
+
+textarea{
+border:1px solid white;
+background-color:hsla(328, 100%, 100%, 0.22);
+width:402px;
+height:200px;
+color:white;
+margin-bottom:50px;
+
+}
+
+input[type="button"]{
+border:1px solid white;
+background-color:hsla(328, 100%, 100%, 0.22);
+width:408px;
+height:40px;
+color:white;
+font-family: 'Cormorant SC', serif;
+font-size:20px;
+}
+
+::placeholder{
+color:white;
+font-family:"Meddon";
+padding-left:10%;
+}
+
+h1{
+	font-family: 'Cormorant SC', serif;
+	font-size:30px;
+	position:absolute;
+	top:10%;
+	left:69%;
+	color:white;
+	opacity:0.8;
+
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+
+
+
+
+<div id="sideNavigation" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="perfumes.html" >Perfumes</a>
+  <a href="contact.html">Contact</a>
+</div>
+ 
+<nav class="topnav">
+  <a href="#" onclick="openNav()">
+    <svg width="30" height="30" id="icoOpen">
+        <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+        <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+        <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+    </svg>
+  </a>
+</nav>
+
+<div id="main">
+<h1>CONTACT</h1>
+
+
+<figure class="wp-caption"><img src="contact.gif">
+
+
+<form>
+
+<input type="text" placeholder="your name">
+<input type="text" placeholder="your e-mail"><br>
+<textarea placeholder="your message"></textarea><br>
+<input type="button" value="send">
+
+
+
+</form>
+
+</div>
+
+
+<div class="footer">
+<p>&copy Miruna Manoila,2018 * All Rights Reserved</p>
+</div>
+
+<script type="text/javascript">
+function openNav() {
+    document.getElementById("sideNavigation").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+ 
+function closeNav() {
+    document.getElementById("sideNavigation").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+
+</script>
+</body>
+</html>
